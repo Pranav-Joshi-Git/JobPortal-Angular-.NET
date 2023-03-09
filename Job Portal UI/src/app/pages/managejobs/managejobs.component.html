@@ -1,0 +1,29 @@
+<div class="container px-5 py-5">
+  <div class="text-center">
+    <h1 class="display-3 pv-3">Manage Jobs</h1>
+  </div>
+
+  <div *ngFor="let job of jobs" class="card d-flex flex-lg-row m-3">
+    <div class="card-body">
+      <h5 class="card-title">{{ job["jobTitle"] }}</h5>
+      <p class="card-text">Job Description : {{ job["jobDesc"] }}</p>
+      <p class="card-text">Skills requried : {{ job["jobSkills"] }}</p>
+      <p class="card-text">
+        Experience : {{ job["minExp"] }} -
+        {{ job["maxExp"] }} years
+      </p>
+    </div>
+    <button
+      class="btn btn-success mx-auto mx-lg-1 my-auto my-1"
+      (click)="gotoEdit(job['id'])"
+    >
+      Update
+    </button>
+    <button
+      class="btn btn-danger mx-auto mx-lg-1 my-lg-auto my-1"
+      (click)="deleteJob(job['JobId'])"
+    >
+      Delete
+    </button>
+  </div>
+</div>

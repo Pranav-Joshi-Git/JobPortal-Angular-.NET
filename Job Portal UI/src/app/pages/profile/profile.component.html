@@ -1,0 +1,167 @@
+<div class="container px-5 py-5">
+  <div class="d-flex flex-column my-4">
+    <div class="card p-5 d-block">
+      <h4>Name : {{ user["firstName"] + " " + user["lastName"] }}</h4>
+      <h4>Email : {{ user["email"] }}</h4>
+      <button
+        type="button"
+        class="btn btn-primary my-2"
+        data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop"
+      >
+        Update Profile
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">
+                Update Profile
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form [formGroup]="editUserForm">
+                <div class="form-group">
+                  <label for="firstName">First Name</label>
+                  <input
+                    formControlName="firstName"
+                    type="text"
+                    class="form-control"
+                    id="firstName"
+                    placeholder="Enter your first name"
+                  />
+                </div>
+                <div class="form-group pt-3">
+                  <label for="lastName">Last Name</label>
+                  <input
+                    formControlName="lastName"
+                    type="text"
+                    class="form-control"
+                    id="lastName"
+                    placeholder="Enter your last name"
+                  />
+                </div>
+                <div class="form-group pt-3">
+                  <label for="exampleInputEmail1">Email</label>
+                  <input
+                    formControlName="email"
+                    type="email"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter your email address"
+                  />
+                </div>
+                <div class="form-group pt-3">
+                  <label for="passwordInput">Password</label>
+                  <input
+                    formControlName="password"
+                    type="password"
+                    class="form-control"
+                    id="passwordInput"
+                    aria-describedby="passHelp"
+                    placeholder="Enter your password"
+                  />
+                </div>
+                <!-- <div class="form-group pt-3">
+                  <label class="form-label" for="customFile">Resume</label>
+
+                  <input
+                    type="file"
+                    formControlName="resume"
+                    class="form-control"
+                    id="customFile"
+                  />
+                </div> -->
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                (click)="editUser()"
+              >
+                Update
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul
+      class="nav nav-tabs justify-content-center my-4"
+      id="myTab"
+      role="tablist"
+    >
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link active"
+          id="appliedJob-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#appliedJob"
+          type="button"
+          role="tab"
+          aria-controls="appliedJob"
+          aria-selected="true"
+        >
+          Applied Jobs
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="savedJob-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#savedJob"
+          type="button"
+          role="tab"
+          aria-controls="savedJob"
+          aria-selected="false"
+        >
+          Saved Jobs
+        </button>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div
+        class="tab-pane fade show active"
+        id="appliedJob"
+        role="tabpanel"
+        aria-labelledby="appliedJob-tab"
+      >
+        Applied Job List
+      </div>
+      <div
+        class="tab-pane fade"
+        id="savedJob"
+        role="tabpanel"
+        aria-labelledby="savedJob-tab"
+      >
+        Saved Job List
+      </div>
+    </div>
+  </div>
+</div>

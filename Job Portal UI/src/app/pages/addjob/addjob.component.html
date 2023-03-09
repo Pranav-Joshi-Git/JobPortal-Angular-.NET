@@ -1,0 +1,63 @@
+<div class="container px-5 py-5">
+  <div class="text-center">
+    <h1 class="display-3 pv-3">Add Job</h1>
+  </div>
+  <form [formGroup]="addJobForm">
+    <div class="form-group">
+      <label for="title">Job Title</label>
+      <input
+        formControlName="title"
+        type="text"
+        class="form-control"
+        id="title"
+        placeholder="Enter job title"
+      />
+    </div>
+    <div class="form-group pt-3">
+      <label for="description">Job description</label>
+      <input
+        formControlName="description"
+        type="text"
+        class="form-control"
+        id="description"
+        placeholder="Enter job description"
+      />
+    </div>
+    <div class="form-group pt-3">
+      <label for="skill">Job skills</label>
+      <input
+        formControlName="skill"
+        type="text"
+        class="form-control"
+        id="skill"
+        placeholder="Enter skills seperated by commas"
+      />
+    </div>
+
+    <div class="form-group pt-3">
+      <label for="minExperience">Job minimum Experience</label>
+      <input
+        formControlName="minExperience"
+        type="number"
+        class="form-control"
+        id="minExperience"
+        placeholder="Enter minimum experience"
+      />
+    </div>
+    <div class="form-group pt-3">
+      <label for="maxExperience">Job maximum Experience</label>
+      <input
+        formControlName="maxExperience"
+        type="number"
+        class="form-control"
+        id="maxExperience"
+        placeholder="Enter maximum experience"
+      />
+    </div>
+    <div class="form-group pt-3" style="text-align: center">
+      <button type="button" class="btn btn-dark m-2" (click)="addJob()">
+        Add Job
+      </button>
+    </div>
+  </form>
+</div>

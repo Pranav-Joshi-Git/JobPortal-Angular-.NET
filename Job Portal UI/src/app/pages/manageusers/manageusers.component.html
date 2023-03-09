@@ -1,0 +1,26 @@
+<div class="container px-5 py-5">
+  <div class="text-center">
+    <h1 class="display-3 pv-3">Manage Users</h1>
+  </div>
+
+  <div *ngFor="let user of users" class="card d-flex flex-lg-row m-3">
+    <div class="card-body">
+      <h5 class="card-title">{{ user["email"] }}</h5>
+      <p class="card-text">{{ user["firstName"] }} {{ user["lastName"] }}</p>
+    </div>
+    <a
+      class="btn btn-success mx-auto mx-lg-1 my-auto my-1"
+      (click)="gotoEdit(user['UserId'])"
+      >Update</a
+    >
+    <button
+      class="btn btn-danger mx-auto mx-lg-1 my-lg-auto my-1"
+      (click)="deleteUser(user['UserId'])"
+    >
+      Delete
+    </button>
+  </div>
+</div>
+
+
+
