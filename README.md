@@ -1,5 +1,5 @@
 # 💫 About Project:
-🔭 This project is based upon implementing Job Portal<br>👯 Tech stack used in this project - Angular and .NET core web API<br>🌱 This project uses code first approach<br>💬 Initially open and build .sln file and Two commands in NuGet Package Manager console<br>1. Add-Migration "NameOfMigration"<br>2. Update-databas
+🔭 This project is based upon implementing Job Portal<br>👯 Tech stack used in this project - Angular and .NET core web API<br>🌱 This project uses code first approach<br>💬 Initially open and build .sln file and Two commands in NuGet Package Manager console<br>1. Add-Migration "NameOfMigration"<br>2. Update-database
 
 ### ✍️ Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
